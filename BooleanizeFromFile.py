@@ -1,7 +1,7 @@
 
 def BooleanizeFromFile(InputData, OutputFile ):
     """ function for 
-        :InputData: str - 
+        :InputData: str - the name of file with input data  
         :OutputFile: str - the name of a file, where the results would be written 
         :return: -
         """
