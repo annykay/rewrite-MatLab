@@ -7,20 +7,29 @@ def ecdf(x, freq):
        :return: ys - y values for ecdf 
     """
     #print(len(np.nonzero(x)[0]))
-    if len(np.nonzero(x)[0])==0:# if all x are 0 
-        x = np.arange(0, len(x), 1)
-        ys = [1 for i in range(len(x))]
+        if len(np.nonzero(x)[0])==0:
+        lenth = len(x)
+        x = np.arange(0, lenth, 1)
+        ys = np.ones(lenth)
+        #print('here!!!')
         return x, ys
     #print('first x ---------->', x)
-    x, freq  = zip(*sorted(zip(x,freq)))
-    #xs = np.sort(x)
+    indices = x.argsort()
+
+    x = x[indices]  # -> [1 2 3]
+    freq = freq[indices]
+    
+    
+  
     if freq[0]==0:
+        
         ys = np.zeros(len(x))
-        ys[1:] = np.cumsum(freq)[1:]/np.sum(freq)
+        ys[1:] = cumsum(freq)/sum(freq)
     else:
         ys = np.cumsum(freq)/np.sum(freq)
-    #ys = np.arange(1, len(xs)+1)/float(len(xs))
+    
     #print('second x --------------------->', x)
     if not isinstance(x[0], float):
+        print('not float',x[0])
         x = [x[i][0] for i in range(len(x))]
     return x, ys
