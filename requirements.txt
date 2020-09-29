@@ -1,0 +1,4 @@
+scipy v 1.4.1
+numpy v 1.18.5
+joblib v 0.16.0 
+
