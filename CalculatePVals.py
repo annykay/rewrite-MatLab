@@ -17,7 +17,7 @@ def CalculatePvalues(dists, exp_inp):
     Pvals_inter_up = np.zeros((r,c))#inizialazing arrays for pvals
 
     #calculating pvals with several jobs
-    Parallel(n_jobs=-2)(delayed(as_par_for)(i, exp_inp, xq, dists,c, Pvals_low, Pvals_up, Pvals_inter_low,Pvals_inter_up) for i in range(r))
+    Parallel(n_jobs=4,prefer="threads")(delayed(as_par_for)(i, exp_inp, xq, dists,c, Pvals_low, Pvals_up, Pvals_inter_low,Pvals_inter_up) for i in range(r))
     print('here -------------------> ' ,Pvals_low)
 
     where_are_NaNs = isnan(Pvals_low)
