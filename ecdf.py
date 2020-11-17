@@ -1,4 +1,3 @@
-
 def ecdf(x, freq):
     """calculete empirical destribtion function for values x with frequences freq
        :x:list - values 
@@ -6,8 +5,9 @@ def ecdf(x, freq):
        :return: x - x values for ecdf
        :return: ys - y values for ecdf 
     """
+    import numpy as np
     #print(len(np.nonzero(x)[0]))
-        if len(np.nonzero(x)[0])==0:
+    if len(np.nonzero(x)[0])==0:
         lenth = len(x)
         x = np.arange(0, lenth, 1)
         ys = np.ones(lenth)
