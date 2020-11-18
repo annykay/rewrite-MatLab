@@ -1,7 +1,7 @@
 
 def as_par_for(r, exp_inp, xq, dists,c,Pvals_low, Pvals_up, Pvals_inter_low,Pvals_inter_up):
   """function for multiprocessing. Should be called from CalculatePvalues"""
-  from rewrite_MatLab_master.ecdf import ecdf as ecdf
+  from rewrite_MatLab.ecdf import ecdf as ecdf
   from scipy import interpolate
   import numpy as np
   print('r ------->', r)
