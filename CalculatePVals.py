@@ -5,7 +5,7 @@ def CalculatePvalues(dists, exp_inp):
        :return: - [Pvals_low,Pvals_up,Pvals_inter_low,Pvals_inter_up,Pvals_low_adj,Pvals_up_adj,Pvals_inter_low_adj,Pvals_inter_up_adj] 
                 - pvalues
     """
-  from rewrite_MatLab_master.BooleanizeFromFile import as_par_for as as_par_for
+  from rewrite_MatLab.BooleanizeFromFile import as_par_for as as_par_for
   import numpy as np
   from joblib import Parallel as Parallel
   from joblib import delayed as delayed
