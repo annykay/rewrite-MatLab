@@ -1,4 +1,4 @@
-# rewrite-MatLab
+# rewrite_MatLab
 Here is a program in python, that calculates p- and q- values for given expression values with respect to the treshold dstributions. 
 
 Treshold distribution array derived from DetermineTresholdDestribution.m (in this repository - Treshold_CoTFcRF.m), gene expression values matrix is derived from HSC_bulk_exp.tsv.
@@ -8,5 +8,5 @@ To calculate these values use BooleanizeFromFile.py function. It takes two argum
 Before importing this package, you schould add the way to this files to PATH. 
 
 ```python
-python -c 'from rewrite_MatLab_master.BooleanizeFromFile import BooleanizeFromFile as BooleanizeFromFile; BooleanizeFromFile('HSC_bulk_exp.tsv', 'test.txt')'
+python -c 'from rewrite_MatLab.BooleanizeFromFile import BooleanizeFromFile as BooleanizeFromFile; BooleanizeFromFile('HSC_bulk_exp.tsv', 'test.txt')'
 ```
