@@ -23,7 +23,7 @@ def CalculatePvalues(dists, exp_inp):
   Parallel(n_jobs=4,prefer="threads")(delayed(as_par_for)(i, exp_inp, xq, dists,c, Pvals_low, Pvals_up, Pvals_inter_low,Pvals_inter_up) for i in range(r))
   print('here -------------------> ' ,Pvals_low)
 
-  where_are_NaNs = isnan(Pvals_low)
+  where_are_NaNs = np.isnan(Pvals_low)
   Pvals_low[where_are_NaNs] = 1
 
     #making bh correction. reshape is needed for multipletests 
