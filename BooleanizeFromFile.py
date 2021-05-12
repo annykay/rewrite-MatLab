@@ -111,7 +111,7 @@ def BooleanizeFromFile(InputData, OutputFile ):
         :OutputFile: str - the name of a file, where the results would be written 
         :return: -
         """
-   from rewrite_MatLab_master.CalculatePVals import CalculatePvalues as CalculatePvalues 
+   from rewrite_MatLab.CalculatePVals import CalculatePvalues as CalculatePvalues 
    import scipy.io#need for loading .mat files 
    import numpy as np #need for calculations 
    mat = scipy.io.loadmat('Thresholds_CoTFcRF.mat')  # load data from 'Treshholds_CoTFcRF.mat'. Returns a dict, numeric data is under 
