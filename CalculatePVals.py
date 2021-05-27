@@ -22,7 +22,8 @@ def CalculatePvalues(dists, exp_inp):
     #calculating pvals with several jobs
   Parallel(n_jobs=4,prefer="threads")(delayed(as_par_for)(i, exp_inp, xq, dists,c, Pvals_low, Pvals_up, Pvals_inter_low,Pvals_inter_up) for i in range(r))
   print('here -------------------> ' ,Pvals_low)
-
+  
+  from statsmodels.stats.multitest.multipletests import multipletests
   where_are_NaNs = np.isnan(Pvals_low)
   Pvals_low[where_are_NaNs] = 1
 
